@@ -51,24 +51,30 @@
             </a>
           </li>
           <li class="@yield('active2')">
-            <a href="/admin/profil">
+            <a href="/admin/profile">
               <i class="now-ui-icons education_atom"></i>
               <p>Company Profile</p>
             </a>
           </li>
           <li class="@yield('active3')">
             <a href="/admin/article">
-              <i class="now-ui-icons location_map-big"></i>
+              <i class="now-ui-icons education_paper"></i>
               <p>Article</p>
             </a>
           </li>
           <li class="@yield('active4')">
-            <a href="/admin/booking">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Booking List</p>
+            <a href="/admin/gallery">
+              <i class="now-ui-icons design_image"></i>
+              <p>Gallery</p>
             </a>
           </li>
           <li class="@yield('active5')">
+            <a href="/admin/documentation">
+              <i class="now-ui-icons media-1_camera-compact"></i>
+              <p>Documentation</p>
+            </a>
+          </li>
+          <li class="@yield('active6')">
             <a href="/admin/users">
               <i class="now-ui-icons users_single-02"></i>
               <p>Users</p>

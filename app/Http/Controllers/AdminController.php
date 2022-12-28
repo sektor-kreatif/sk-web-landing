@@ -10,6 +10,14 @@ use Illuminate\Support\Facades\Validator;
 
 class AdminController extends Controller
 {
+    public function admin() {
+        if(!Session::get('loginAdmin')) {
+            return redirect('/admin/login');
+        }else {
+            return redirect('/admin/dashboard');
+        }
+    }
+
     public function loginIndex(){
         if(! Session::get('loginAdmin')){
             $admin = Admin::get();
