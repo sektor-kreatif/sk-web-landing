@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title', 'Company Profile | Sektor Kreatif Admin')
-@section('active1', 'active1')
+@section('active2', 'active')
 @section('big_title', 'Company Profile')
 @section('content')
 <div class="row">
@@ -73,18 +73,18 @@
     </div>
     <div class="col-md-4">
         <div class="card card-user">
-          <div class="image">
-            <img src="/admin-template/assets/img/bg5.jpg" alt="...">
-          </div>
+          {{-- <div class="image">
+            <img src="/admin-template/assets/img/ilustration.jpg" alt="...">
+          </div> --}}
           <div class="card-body">
             <div class="author">
                 <img class="avatar border-gray" src="
                   @if ($profiles->count() > 0)
                     {{$profiles[0]->company_logo}}
                   @else
-                    /admin-template/assets/img/mike.jpg
+                    /admin-template/assets/img/ilustration.jpg
                   @endif
-                " id="logo" alt="...">
+                " id="logo" alt="..." style="background-color: white; border-color: coral;">
                 <h5 class="title" id="name">
                   @if ($profiles->count() > 0)
                     {{$profiles[0]->company_name}}

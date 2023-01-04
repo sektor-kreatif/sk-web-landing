@@ -179,7 +179,7 @@
 
 
   <!-- Start Facts-->
-  <section id="facts" class="section parallax">
+  {{-- <section id="facts" class="section parallax">
     <div class="overlay"></div>
        <div class="container">
            <div class="row">
@@ -218,7 +218,7 @@
 
              </div> <!-- /.row -->
        </div> <!-- /.container -->
-  </section>
+  </section> --}}
   <!--End Facts-->
 
 
@@ -839,7 +839,7 @@ viverra purus tristique.</p>
 
 
   <!--Start Team-->
-  <section id="team" class="section">
+  {{-- <section id="team" class="section">
 		<div class="container">
             <div class="row">
 
@@ -940,7 +940,7 @@ viverra purus tristique.</p>
                 <!-- End Team -->
 			</div>
             <!-- End Content -->
-	</section>
+	</section> --}}
   <!--End Team-->
 
 
@@ -1646,6 +1646,29 @@ viverra purus tristique.</p>
     <script type="text/javascript" src="/landing-template/js/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript" src="/landing-template/js/jquery.mixitup.min.js"></script>
     <script type="text/javascript" src="/landing-template/js/custom.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDkIjT5VQpliYk_6KIFWkeNa9d-j9lk7Q8",
+          authDomain: "sk-web-landing.firebaseapp.com",
+          projectId: "sk-web-landing",
+          storageBucket: "sk-web-landing.appspot.com",
+          messagingSenderId: "544613013744",
+          appId: "1:544613013744:web:90b2da72d2ddbe25b78a35",
+          measurementId: "G-4V13N1Y5Q9"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 
  </body>
 </html>

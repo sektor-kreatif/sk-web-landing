@@ -1,6 +1,6 @@
 @extends('admin.master.master')
 @section('title', 'Article | Sektor Kreatif Admin')
-@section('active1', 'active2')
+@section('active3', 'active')
 @section('big_title', 'Article')
 @section('content')
 <div class="row">
@@ -12,7 +12,7 @@
             </div>
             <div class="card-body ">
                 <div class="table-full-width table-responsive">
-                    <table class="table table-borderless datatables">
+                    <table class="table table-borderless datatables" style="border-collapse:separate; border-spacing:5px;">
                         <thead class=" text-primary">
                             <td>
                                 Numb.
@@ -20,6 +20,7 @@
                             <td>
                                 Title
                             </td>
+                            <td>Ilustration</td>
                             <td>
                                 Category
                             </td>
@@ -41,6 +42,9 @@
                                 </td>
                                 <td>
                                     {{$art->title}}
+                                </td>
+                                <td>
+                                    <img src="{{$art->image}}" width="200px">
                                 </td>
                                 <td>
                                     {{$art->category->category}}
@@ -80,11 +84,23 @@
     <div class="col-md-4">
         <div class="card  card-tasks">
           <div class="card-header ">
-            <h5 class="card-title">Category</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="card-title">Category</h5>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" rel="tooltip" class="btn btn-primary"
+                    data-toggle="modal" data-target="#addCategory" style="float: right"
+                    >
+                        <i class="now-ui-icons ui-1_simple-add"></i>
+                        Add
+                    </button>
+                </div>
+            </div>
           </div>
           <div class="card-body ">
               <div class="table-full-width table-responsive">
-                <table class="table">
+                <table class="table table-stripped">
                   <tbody>
                     @foreach ($category as $cat)
                     <tr>
@@ -108,13 +124,7 @@
                   </tbody>
                 </table>
               </div>
-          </div>
-          <div class="card-footer">
               <hr>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCategory">
-                  <i class="now-ui-icons ui-1_simple-add"></i>
-                  Add
-              </button>
           </div>
         </div>
     </div>
@@ -291,10 +301,10 @@
             <form autocomplete="off" action="/admin/category/delete" method="post" enctype="multipart/form-data" class="form-horizontal">
                 {{ csrf_field()}}
                 <div class="modal-body">
-                    <br>
-                    <h5>Apakah anda yakin?</h5>
-                    <br>
                     <div class="row">
+                        <div class="col-md-12">
+                            <p>Apakah anda yakin?</p>
+                        </div>
                         <div class="col-md-12" hidden>
                             <div class="form-group">
                             <input type="text" class="form-control" name="category_id" id="category_id" placeholder="Category Id">
@@ -324,10 +334,10 @@
             <form autocomplete="off" action="/admin/article/delete" method="post" enctype="multipart/form-data" class="form-horizontal">
                 {{ csrf_field()}}
                 <div class="modal-body">
-                    <br>
-                    <h5>Apakah anda yakin?</h5>
-                    <br>
                     <div class="row">
+                        <div class="col-md-12">
+                            <p>Apakah anda yakin?</p>
+                        </div>
                         <div class="col-md-12" hidden>
                             <div class="form-group">
                             <input type="text" class="form-control" name="article_id" id="article_id">

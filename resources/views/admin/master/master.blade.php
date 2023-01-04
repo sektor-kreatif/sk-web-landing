@@ -52,7 +52,7 @@
           </li>
           <li class="@yield('active2')">
             <a href="/admin/profile">
-              <i class="now-ui-icons education_atom"></i>
+              <i class="now-ui-icons business_bank"></i>
               <p>Company Profile</p>
             </a>
           </li>
@@ -75,9 +75,21 @@
             </a>
           </li>
           <li class="@yield('active6')">
-            <a href="/admin/users">
+            <a href="/admin/mitra">
               <i class="now-ui-icons users_single-02"></i>
-              <p>Users</p>
+              <p>Mitra</p>
+            </a>
+          </li>
+          <li class="@yield('active7')">
+            <a href="/admin/service">
+              <i class="now-ui-icons shopping_delivery-fast"></i>
+              <p>Service</p>
+            </a>
+          </li>
+          <li class="@yield('active8')">
+            <a href="/admin/testimony">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Testimony</p>
             </a>
           </li>
         </ul>

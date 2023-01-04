@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Session;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Google\Analytics\Data\V1beta\BetaAnalyticsDataClient;
+use Google\Analytics\Data\V1beta\DateRange;
+use Google\Analytics\Data\V1beta\Dimension;
+use Google\Analytics\Data\V1beta\Metric;
+use File;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -71,6 +77,37 @@ class AdminController extends Controller
         if(! Session::get('loginAdmin')){
             return redirect('/admin/login')->with('alert-danger', 'You must login firstly!');
         }else{
+            // $property_id = '347687615';
+
+            // // Using a default constructor instructs the client to use the credentials
+            // // specified in GOOGLE_APPLICATION_CREDENTIALS environment variable.
+            // $client = new BetaAnalyticsDataClient([
+            //     'keyFilePath' => storage_path('./firebase.json')
+            // ]);
+
+            // // Make an API call.
+            // $response = $client->runReport([
+            //     'property' => 'properties/' . $property_id,
+            //     'dateRanges' => [
+            //         new DateRange([
+            //             'start_date' => Carbon::now()->subDays(29)->toDateString(),
+            //             'end_date' => 'today',
+            //         ]),
+            //     ],
+            //     'dimensions' => [new Dimension(
+            //         [
+            //             'name' => 'date',
+            //         ]
+            //     ),
+            //     ],
+            //     'metrics' => [new Metric(
+            //         [
+            //             'name' => 'activeUsers',
+            //         ]
+            //     )
+            //     ]
+            // ]);
+
             return view('admin.content.dashboard');
         }
     }
