@@ -2,8 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sk-web-landing/
-    - /bin/cp -r * $DEPLOYPATH #copy all from root
-#    - /bin/cp -r ./public/* $DEPLOYPATH/public_html/
+    - /bin/cp -r * $DEPLOYPATH
     - /bin/cp -R ./public/admin-template /home/public_html/
     - /bin/cp -R ./public/calendar-template /home/public_html/
     - /bin/cp -R ./public/images /home/public_html/
