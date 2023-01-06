@@ -1571,9 +1571,10 @@ viverra purus tristique.</p>
                <div class="col-md-8 col-md-offset-2 contact-form">
 
                     <div class="contact-info text-center">
-                       <p>+62 896-6728-9952</p>
-                       <p>Jalan Pamayanan, Lohbener Lama, Indramayu</p>
-                       <p>sektorkreatif@gmail.com </p>
+                        <p>+62 896-6728-9952</p>
+                        <p>Jl. Benteng Mas V, RT.10/RW.6, Sunter Jaya</p>
+                        <p>Kec. Tj. Priok, Kota Jakarta Utara, Daerah Khusus Ibukota Jakarta 14360</p>
+                        <p>sektorkreatif@gmail.com </p>
                        <center><a href="whatsapp://send?text=Hai, saya ingin buat video!&phone=+6289667289952" class="btn btn-green">KONTAK KAMI</a></center>
                     </div>
 
