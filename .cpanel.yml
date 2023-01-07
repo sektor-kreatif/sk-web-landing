@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - current_path=`pwd`
-    - if [ $current_path == "/home/seky5115/repositories/sk-web-landing" ]; then export DEPLOYPATH=/home/seky5115/sk-web-landing/; fi;
-    - /bin/cp -R * $DEPLOYPATH
+    - if [ $current_path == "/home/seky5115/repositories/sk-web-landing" ]; then export DEPLOYPATH=/home/seky5115/; fi;
+    - /bin/cp -R * $DEPLOYPATH/sk-web-landing/
