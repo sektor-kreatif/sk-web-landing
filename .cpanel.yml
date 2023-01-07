@@ -4,8 +4,8 @@ deployment:
     - current_path=`pwd`
     - if [ $current_path == "/home/seky5115/repositories/sk-web-landing" ]; then export DEPLOYPATH=/home/seky5115/; fi;
     - /bin/cp -R * $DEPLOYPATH/sk-web-landing/
-    - /bin/cp -R /public/admin-template $DEPLOYPATH/public_html/
-    - /bin/cp -R /public/calendar-template $DEPLOYPATH/public_html/
-    - /bin/cp -R /public/images $DEPLOYPATH/public_html/
-    - /bin/cp -R /public/landing-template $DEPLOYPATH/home/public_html/
-    - /bin/cp -R /public/login-template $DEPLOYPATH/home/public_html/
+    - /bin/cp -R ./public/admin-template/* $DEPLOYPATH/public_html/admin-template/
+    - /bin/cp -R ./public/calendar-template/* $DEPLOYPATH/public_html/calendar-template/
+    - /bin/cp -R ./public/images/* $DEPLOYPATH/public_html/images/
+    - /bin/cp -R ./public/landing-template/* $DEPLOYPATH/home/public_html/landing-template/
+    - /bin/cp -R ./public/login-template/* $DEPLOYPATH/home/public_html//login-template/
