@@ -8,4 +8,4 @@ deployment:
     - /bin/cp -R ./public/calendar-template/* $DEPLOYPATH/public_html/calendar-template/
     - /bin/cp -R ./public/images/* $DEPLOYPATH/public_html/images/
     - /bin/cp -R ./public/landing-template/* $DEPLOYPATH/home/public_html/landing-template/
-    - /bin/cp -R ./public/login-template/* $DEPLOYPATH/home/public_html//login-template/
+    - /bin/cp -R ./public/login-template/* $DEPLOYPATH/home/public_html/login-template/
