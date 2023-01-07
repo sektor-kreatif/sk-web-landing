@@ -3,8 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/sekky5115/
     - /bin/cp -r * $DEPLOYPATH/sk-web-landing/
-    - /bin/cp -R ./public/admin-template $DEPLOYPATH/public_html/
-    - /bin/cp -R ./public/calendar-template $DEPLOYPATH/public_html/
-    - /bin/cp -R ./public/images $DEPLOYPATH/public_html/
-    - /bin/cp -R ./public/landing-template $DEPLOYPATH/home/public_html/
-    - /bin/cp -R ./public/login-template $DEPLOYPATH/home/public_html/
