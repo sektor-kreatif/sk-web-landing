@@ -104,7 +104,7 @@
 @endsection
 
 @push('style')
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/oe0tboyl0qxghgtam2ir59yymlxayru21bwgrk83ewn8t50x/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
 function textEditor() {
     tinymce.init({
