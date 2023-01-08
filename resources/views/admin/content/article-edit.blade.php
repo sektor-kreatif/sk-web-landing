@@ -116,7 +116,11 @@ function textEditor() {
         ],
         toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
           'alignleft aligncenter alignright alignjustify | ' +
-          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+          'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help',
+        init_instance_callback : function(editor) {
+            var freeTiny = document.querySelector('.tox .tox-notification--in');
+            freeTiny.style.display = 'none';
+        }
     });
 }
 textEditor()
