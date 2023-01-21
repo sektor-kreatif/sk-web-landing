@@ -49,7 +49,7 @@
                                     {{$mitra->name}}
                                 </td>
                                 <td>
-                                    <img src="{{$mitra->logo}}" width="200px">
+                                    <img src="{{$mitra->logo}}" width="50px">
                                 </td>
                                 <td>
                                     <button type="button" rel="tooltip" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"

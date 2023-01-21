@@ -328,7 +328,7 @@
 									<h3 class="tt-heading-subtitle text-gray">Latest Projects</h3>
 									<h2 class="tt-heading-title">Works</h2>
 									<div class="tt-btn tt-btn-link margin-top-20">
-										<a href="/services" data-hover="See All Works">See All Works</a>
+										<a href="/gallery" data-hover="See All Works">See All Works</a>
 									</div>
 								</div>
 								<!-- End tt-Heading -->
