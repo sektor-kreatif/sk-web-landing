@@ -23,6 +23,7 @@ use App\Http\Controllers\TestimonyController;
 */
 
 Route::get('/', [HomeController::class, 'homeIndex']);
+Route::get('/gallery', [HomeController::class, 'galleryIndex']);
 
 Route::get('/admin', [AdminController::class, 'admin']);
 Route::get('/admin/login', [AdminController::class, 'loginIndex']);

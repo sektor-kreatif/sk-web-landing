@@ -30,7 +30,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Phone </label>
-                      <input type="number" class="form-control" name="company_phone" placeholder="Company Phone" value="@if($profiles->count() > 0){{$profiles[0]->company_phone}}@endif">
+                      <input type="text" class="form-control" name="company_phone" placeholder="Company Phone" value="@if($profiles->count() > 0){{$profiles[0]->company_phone}}@endif">
                     </div>
                 </div>
               </div>

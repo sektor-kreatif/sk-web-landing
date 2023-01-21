@@ -49,7 +49,7 @@
                                     {{$service->service}}
                                 </td>
                                 <td>
-                                    <img src="{{$service->icon}}" width="200px">
+                                    <img src="{{$service->icon}}" width="50px">
                                 </td>
                                 <td>
                                     <button type="button" rel="tooltip" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral"

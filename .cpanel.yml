@@ -9,3 +9,4 @@ deployment:
     - /bin/cp -r $current_path/public/images $DEPLOYPATH/public_html/
     - /bin/cp -r $current_path/public/landing-template $DEPLOYPATH/home/public_html/
     - /bin/cp -r $current_path/public/login-template $DEPLOYPATH/home/public_html/
+    - /bin/cp -r $current_path/public/user-template $DEPLOYPATH/home/public_html/
