@@ -106,8 +106,8 @@
 							<div class="tt-logo">
 								<a href="/">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
-									<img src="/images/logo-single-ligth.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
-									<img src="/images/logo-single-dark.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
+									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo" width="100px"> <!-- logo light -->
+									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo" width="100px"> <!-- logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->
@@ -314,10 +314,59 @@
 						============================
 						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
 						-->
-						<div class="tt-section no-padding-bottom">
-							<div class="tt-section-inner">
+						<div class="tt-section padding-top-xlg-150 padding-bottom-xlg-150 bg-white-accent-2">
+							<div class="tt-section-inner tt-wrap">
 
 								<!-- Begin tt-Heading
+								======================
+								* Use class "tt-heading-xsm", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set caption size (no class = default size).
+								* Use class "tt-heading-stroke" to enable stroke style.
+								* Use class "tt-heading-center" to align tt-Heading to center.
+								* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
+								-->
+								<div class="tt-heading tt-heading-lg tt-heading-center margin-bottom-15-p anim-fadeinup">
+									<h3 class="tt-heading-subtitle text-gray">What We Do</h3>
+									<h2 class="tt-heading-title">Services</h2>
+								</div>
+								<!-- End tt-Heading -->
+
+								<!-- Begin logo wall
+								=====================
+								* Use class "cl-col-2", "cl-col-3" or "cl-col-4" to change columns.
+								* Hint: for better results make sure all your images are in the same dimensions!
+								-->
+								<ul class="tt-logo-wall cl-col-44 anim-fadeinup">
+                                    @foreach ($services as $svc)
+									<li>
+										<a href="#" class="cursor-alter" target="_blank" rel="noopener">
+											<br>
+											<img src="{{$svc->icon}}" alt="Client" style="
+											float: center;
+											width:  100px;
+											height: 100px;
+											object-fit: cover;">
+											<p style="margin: 10px">{{$svc->service}}</p>
+										</a>
+									</li>
+									@endforeach
+                                    <!-- Use the below example if you want a list without links -->
+									<!-- <li><img src="assets/img/clients/client-1.png" alt="Client"></li> -->
+								</ul>
+								<!-- End logo wall -->
+
+							</div> <!-- /.tt-section-inner -->
+						</div>
+						<!-- End tt-section -->
+
+                        <!-- =======================
+						///// Begin tt-section /////
+						============================
+						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
+						-->
+						<div class="tt-section">
+							<div class="tt-section-inner">
+
+                                <!-- Begin tt-Heading
 								======================
 								* Use class "tt-heading-xsm", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set caption size (no class = default size).
 								* Use class "tt-heading-stroke" to enable stroke style.
@@ -333,7 +382,6 @@
 								</div>
 								<!-- End tt-Heading -->
 
-
 								<!-- Begin portfolio grid (works combined with tt-Ggrid!)
 								==========================
 								* Use class "pgi-hover" to enable portfolio grid item hover effect (behavior depends on "ttgr-gap-*" classes below!).
@@ -341,7 +389,7 @@
 								* Use class "pgi-cap-center" to position portfolio grid item caption to center.
 								* Use class "pgi-cap-inside" to position portfolio grid item caption to inside.
 								-->
-								<div id="portfolio-grid" class="pgi-cap-inside pgi-hover">
+								<div id="portfolio-grid" class="pgi-hover">
 
 									<!-- Begin tt-Grid
 									===================
@@ -353,12 +401,103 @@
 									* Use class "ttgr-not-cropped" to enable not cropped mode (effect only with classes "ttgr-layout-2", "ttgr-layout-3" and "ttgr-layout-4").
 									* Use class "ttgr-shifted" to enable shifted layout (effect only with classes "ttgr-layout-2", "ttgr-layout-3" and "ttgr-layout-4").
 									-->
-									<div class="tt-grid ttgr-layout-creative-2 ttgr-not-cropped ttgr-gap-4">
+									<div class="tt-grid ttgr-layout-3 ttgr-gap-3">
+
+										<!-- Begin tt-Ggrid top content
+										================================ -->
+										<div class="tt-grid-top">
+
+											<!-- Begin tt-Ggrid categories/filter
+											====================================== -->
+											<div class="tt-grid-categories">
+
+												<!-- Begin tt-Ggrid categories trigger
+												=======================================
+												* Use class "ttgr-cat-fixed" to enable categories trigger fixed position.
+												-->
+												<div class="ttgr-cat-trigger-wrap ttgr-cat-fixed">
+													<a href="#portfolio-grid" class="ttgr-cat-trigger not-hide-cursor" data-offset="150">
+														<div class="ttgr-cat-text">
+															<span data-hover="Open">Filter</span>
+														</div>
+														<div class="ttgr-cat-icon">
+															<span class="magnetic-item"><i class="fas fa-layer-group"></i></span>
+														</div>
+													</a>
+												</div>
+												<!-- End tt-Ggrid categories trigger -->
+
+												<!-- Begin tt-Ggrid categories nav
+												=================================== -->
+												<div class="ttgr-cat-nav">
+													<div class="ttgr-cat-list-holder cursor-close">
+														<div class="ttgr-cat-list-inner">
+															<div class="ttgr-cat-list-content">
+																<ul class="ttgr-cat-list">
+																	<li class="ttgr-cat-close">Close <i class="fas fa-times"></i></li> <!-- For mobile devices! -->
+																	<li class="ttgr-cat-item"><a href="#" class="active">Show All</a></li>
+																	<li class="ttgr-cat-item"><a href="#" data-filter=".branding">Branding</a></li>
+																	<li class="ttgr-cat-item"><a href="#" data-filter=".people">People</a></li>
+																	<li class="ttgr-cat-item"><a href="#" data-filter=".nature">Nature</a></li>
+																	<li class="ttgr-cat-item"><a href="#" data-filter=".creative">Creative</a></li>
+																</ul>
+															</div> <!-- /.ttgr-cat-links-content -->
+														</div> <!-- /.ttgr-cat-links-inner -->
+													</div> <!-- /.ttgr-cat-links-holder -->
+												</div>
+												<!-- End tt-Ggrid categories nav -->
+
+											</div>
+											<!-- End tt-Ggrid categories/filter-->
+
+										</div>
+										<!-- End tt-Grid top content -->
+
 
 										<!-- Begin tt-Grid items wrap
 										============================== -->
 										<div class="tt-grid-items-wrap isotope-items-wrap">
+                                            @foreach ($gallery_latest as $gts)
+                                            @if($gts->type == 'image')
+											<!-- Begin tt-Grid item
+											======================== -->
+											<div class="tt-grid-item isotope-item creative">
+												<div class="ttgr-item-inner">
 
+													<!-- Begin portfolio grid item
+													===============================
+													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
+													-->
+													<div class="portfolio-grid-item">
+														<a href="/gallery/{{$gts->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
+															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
+															<div class="pgi-image-holder">
+																<div class="pgi-image-inner anim-zoomin">
+																	<figure class="pgi-image ttgr-height">
+																		<img src="{{$gts->media}}" alt="image">
+																	</figure> <!-- /.pgi-image -->
+																</div> <!-- /.pgi-image-inner -->
+															</div> <!-- /.pgi-image-holder -->
+														</a> <!-- /.pgi-image-wrap -->
+
+														<div class="pgi-caption">
+															<div class="pgi-caption-inner">
+																<h2 class="pgi-title">
+																	<a href="/gallery/{{$gts->gallery_id}}">{{$gts->title}}</a>
+																</h2>
+																<div class="pgi-categories-wrap">
+																	<div class="pgi-category">{{ucwords(str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gts->category))}}</div>
+																	<!-- <div class="pgi-category">Varia</div> -->
+																</div> <!-- /.pli-categories-wrap -->
+															</div> <!-- /.pgi-caption-inner -->
+														</div> <!-- /.pgi-caption -->
+													</div>
+													<!-- End portfolio grid item -->
+
+												</div> <!-- /.ttgr-item-inner -->
+											</div>
+											<!-- End tt-Grid item -->
+                                            @else
 											<!-- Begin tt-Grid item
 											======================== -->
 											<div class="tt-grid-item isotope-item people">
@@ -366,136 +505,29 @@
 
 													<!-- Begin portfolio grid item
 													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"! Also no effect on small screens!).
-													-->
-													<div class="portfolio-grid-item">
-														<a href="/gallery/{{$gallery_latest[0]->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
-															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="{{$gallery_latest[0]->media}}" alt="image">
-																	</figure> <!-- /.pgi-image -->
-																</div> <!-- /.pgi-image-inner -->
-															</div> <!-- /.pgi-image-holder -->
-														</a> <!-- /.pgi-image-wrap -->
-
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">{{$gallery_latest[0]->title}}</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">{{str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gallery_latest[0]->category)}}</div>
-																	<!-- <div class="pgi-category">Varia</div> -->
-																</div> <!-- /.pli-categories-wrap -->
-															</div> <!-- /.pgi-caption-inner -->
-														</div> <!-- /.pgi-caption -->
-													</div>
-													<!-- End portfolio grid item -->
-
-												</div> <!-- /.ttgr-item-inner -->
-											</div>
-											<!-- End tt-Grid item -->
-
-											<!-- Begin tt-Grid item
-											======================== -->
-											<div class="tt-grid-item isotope-item creative">
-												<div class="ttgr-item-inner">
-
-													<!-- Begin portfolio grid item
-													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
-													-->
-													<div class="portfolio-grid-item anim-parallax">
-														<a href="/gallery/{{$gallery_latest[1]->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
-															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="{{$gallery_latest[1]->media}}" alt="image">
-																	</figure> <!-- /.pgi-image -->
-																</div> <!-- /.pgi-image-inner -->
-															</div> <!-- /.pgi-image-holder -->
-														</a> <!-- /.pgi-image-wrap -->
-
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">{{$gallery_latest[1]->title}}</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">{{str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gallery_latest[1]->category)}}</div>
-																	<!-- <div class="pgi-category">Varia</div> -->
-																</div> <!-- /.pli-categories-wrap -->
-															</div> <!-- /.pgi-caption-inner -->
-														</div> <!-- /.pgi-caption -->
-													</div>
-													<!-- End portfolio grid item -->
-
-												</div> <!-- /.ttgr-item-inner -->
-											</div>
-											<!-- End tt-Grid item -->
-
-											<!-- Begin tt-Grid item
-											======================== -->
-											<div class="tt-grid-item isotope-item creative">
-												<div class="ttgr-item-inner">
-
-													<!-- Begin portfolio grid item
-													===============================
-													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
-													-->
-													<div class="portfolio-grid-item anim-parallax">
-														<a href="/gallery/{{$gallery_latest[2]->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
-															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-															<div class="pgi-image-holder cover-opacity-2">
-																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="{{$gallery_latest[2]->media}}" alt="image">
-																	</figure> <!-- /.pgi-image -->
-																</div> <!-- /.pgi-image-inner -->
-															</div> <!-- /.pgi-image-holder -->
-														</a> <!-- /.pgi-image-wrap -->
-
-														<div class="pgi-caption">
-															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">{{$gallery_latest[2]->title}}</h2>
-																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">{{str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gallery_latest[2]->category)}}</div>
-																	<!-- <div class="pgi-category">Varia</div> -->
-																</div> <!-- /.pli-categories-wrap -->
-															</div> <!-- /.pgi-caption-inner -->
-														</div> <!-- /.pgi-caption -->
-													</div>
-													<!-- End portfolio grid item -->
-
-												</div> <!-- /.ttgr-item-inner -->
-											</div>
-											<!-- End tt-Grid item -->
-
-											<!-- Begin tt-Grid item
-											======================== -->
-											<div class="tt-grid-item isotope-item nature">
-												<div class="ttgr-item-inner">
-
-													<!-- Begin portfolio grid item
-													===============================
 													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 													-->
 													<div class="portfolio-grid-item">
-														<a href="/gallery/{{$gallery_latest[3]->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
+														<a href="/gallery/{{$gts->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
 															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-															<div class="pgi-image-holder cover-opacity-2">
+															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
-																	<figure class="pgi-image ttgr-height">
-																		<img src="{{$gallery_latest[3]->media}}" alt="image">
-																	</figure> <!-- /.pgi-image -->
+																	<figure class="pgi-video-wrap ttgr-height">
+																		<video class="pgi-video" loop muted preload="metadata" poster="{{$gts->media}}">
+																			<source src="{{$gts->media}}" type="video/mp4">
+																		</video>
+																	</figure> <!-- /.pgi-video-wrap -->
 																</div> <!-- /.pgi-image-inner -->
 															</div> <!-- /.pgi-image-holder -->
 														</a> <!-- /.pgi-image-wrap -->
 
 														<div class="pgi-caption">
 															<div class="pgi-caption-inner">
-																<h2 class="pgi-title">{{$gallery_latest[3]->title}}</h2>
+																<h2 class="pgi-title">
+																	<a href="/gallery/{{$gts->gallery_id}}">{{$gts->title}}</a>
+																</h2>
 																<div class="pgi-categories-wrap">
-																	<div class="pgi-category">{{str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gallery_latest[3]->category)}}</div>
+																	<div class="pgi-category">{{ucwords(str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gts->category))}}</div>
 																	<!-- <div class="pgi-category">Varia</div> -->
 																</div> <!-- /.pli-categories-wrap -->
 															</div> <!-- /.pgi-caption-inner -->
@@ -506,7 +538,8 @@
 												</div> <!-- /.ttgr-item-inner -->
 											</div>
 											<!-- End tt-Grid item -->
-
+                                            @endif
+                                            @endforeach
 										</div>
 										<!-- End tt-Grid items wrap  -->
 
@@ -516,60 +549,30 @@
 								</div>
 								<!-- End portfolio grid -->
 
-							</div> <!-- /.tt-section-inner -->
-						</div>
-						<!-- End tt-section -->
 
-
-						<!-- =======================
-						///// Begin tt-section /////
-						============================
-						* You can use padding classes if needed. For example "padding-top-xlg-150", "padding-bottom-xlg-150", "no-padding-top", "no-padding-bottom", etc. Note that each situation may be different and each section may need different classes according to your needs. More info about helper classes can be found in the file "helper.css".
-						-->
-						<div class="tt-section padding-bottom-xlg-150 padding-left-sm-3-p padding-right-sm-3-p">
-							<div class="tt-section-inner tt-wrap max-width-1100">
-
-								<!-- Begin tt-Heading
-								======================
-								* Use class "tt-heading-xsm", "tt-heading-sm", "tt-heading-lg", "tt-heading-xlg" or "tt-heading-xxlg" to set caption size (no class = default size).
-								* Use class "tt-heading-stroke" to enable stroke style.
-								* Use class "tt-heading-center" to align tt-Heading to center.
-								* Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
+								<!-- Begin tt-pagination (uncomment below code if you want to use pagination)
+								=========================
+								* Use class "tt-pagin-center" to align center.
 								-->
-								<div class="tt-heading tt-heading-lg tt-heading-center margin-bottom-15-p anim-fadeinup">
-									<h3 class="tt-heading-subtitle text-gray">What We Do</h3>
-									<h2 class="tt-heading-title">Services</h2>
-								</div>
-								<!-- End tt-Heading -->
-
-								<!-- Begin accordion
-								=====================
-								* Use class "tt-ac-sm", "tt-ac-lg", "tt-ac-xlg" or "tt-ac-xxlg" to set accordion size.
-								* Use class "tt-ac-borders" to enable borders.
-								* Add class "is-open" to the "tt-accordion-content" to make this content open by default.
-								-->
-								<div class="tt-accordion tt-ac-xlg tt-ac-borders">
-                                    @foreach ($services as $srv)
-									<div class="tt-accordion-item anim-fadeinup">
-										<div class="tt-accordion-heading">
-
-											<h3 class="tt-ac-head-title"><img src="{{$srv->icon}}" width="50px"> {{$srv->service}}</h3>
-											<div class="tt-accordion-caret-wrap">
-												<div class="tt-accordion-caret magnetic-item"></div>
-											</div>
-										</div> <!-- /.tt-accordion-heading -->
-										<div class="tt-accordion-content max-width-800">
-											<p>{{$srv->desc}}</p>
-										</div> <!-- /.tt-accordion-content -->
-									</div> <!-- /.tt-accordion-item -->
-                                    @endforeach
-								</div>
-								<!-- End accordion -->
+								<!-- <div class="tt-pagination tt-pagin-center anim-fadeinup">
+									<div class="tt-pagin-prev">
+										<a href="" class="tt-pagin-item magnetic-item"><i class="fas fa-chevron-left"></i></a>
+									</div>
+									<div class="tt-pagin-numbers">
+										<a href="#0" class="tt-pagin-item magnetic-item active">1</a>
+										<a href="" class="tt-pagin-item magnetic-item">2</a>
+										<a href="" class="tt-pagin-item magnetic-item">3</a>
+										<a href="" class="tt-pagin-item magnetic-item">4</a>
+									</div>
+									<div class="tt-pagin-next">
+										<a href="" class="tt-pagin-item tt-pagin-next magnetic-item"><i class="fas fa-chevron-right"></i></a>
+									</div>
+								</div> -->
+								<!-- End tt-pagination -->
 
 							</div> <!-- /.tt-section-inner -->
 						</div>
 						<!-- End tt-section -->
-
 
 						<!-- =======================
 						///// Begin tt-section /////
@@ -758,7 +761,7 @@
 											</li>
 											<li class="anim-fadeinup">
 												<span class="tt-ci-icon"><i class="fas fa-phone"></i></span>
-												<a href="tel:+123456789000" class="tt-link">{{$profile[0]->company_phone}}</a>
+												<a href="tel:{{$profile[0]->company_phone}}" class="tt-link">{{$profile[0]->company_phone}}</a>
 											</li>
 											<li class="anim-fadeinup">
 												<span class="tt-ci-icon"><i class="fas fa-envelope"></i></span>

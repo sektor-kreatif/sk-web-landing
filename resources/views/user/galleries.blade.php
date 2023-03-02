@@ -106,8 +106,8 @@
 							<div class="tt-logo">
 								<a href="/">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
-									<img src="/images/logo-single-ligth.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
-									<img src="/images/logo-single-dark.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
+									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo" width="100px"> <!-- logo light -->
+									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo" width="100px"> <!-- logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->

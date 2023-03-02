@@ -10,7 +10,7 @@
 	<head>
 
 		<!-- Title -->
-		<title>Porfolio Carousel Overlay | Tank - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
+		<title>Sektor Kreatif | Gallery Category</title>
 
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -33,14 +33,14 @@
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet"> <!-- Secondary/Alter font -->
 
 		<!-- Libs and Plugins CSS -->
-		<link rel="stylesheet" href="assets/vendor/normalize/normalize.min.css"> <!-- Normalize CSS (https://necolas.github.io/normalize.css/) -->
-		<link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome-all.min.css"> <!-- Font Icons CSS (https://fontawesome.com) Free version! -->
-		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css"> <!-- Swiper CSS (https://swiperjs.com/) -->
-		<link rel="stylesheet" href="assets/vendor/lightgallery/css/lightgallery.min.css"> <!-- lightGallery CSS (http://sachinchoolur.github.io/lightGallery) -->
+		<link rel="stylesheet" href="/user-template/assets/vendor/normalize/normalize.min.css"> <!-- Normalize CSS (https://necolas.github.io/normalize.css/) -->
+		<link rel="stylesheet" href="/user-template/assets/vendor/fontawesome/css/fontawesome-all.min.css"> <!-- Font Icons CSS (https://fontawesome.com) Free version! -->
+		<link rel="stylesheet" href="/user-template/assets/vendor/swiper/css/swiper-bundle.min.css"> <!-- Swiper CSS (https://swiperjs.com/) -->
+		<link rel="stylesheet" href="/user-template/assets/vendor/lightgallery/css/lightgallery.min.css"> <!-- lightGallery CSS (http://sachinchoolur.github.io/lightGallery) -->
 
 		<!-- Template master CSS -->
-		<link rel="stylesheet" href="assets/css/helper.css">
-		<link rel="stylesheet" href="assets/css/theme.css">
+		<link rel="stylesheet" href="/user-template/assets/css/helper.css">
+		<link rel="stylesheet" href="/user-template/assets/css/theme.css">
 
 	</head>
 
@@ -68,7 +68,7 @@
 				<div class="ptr-preloader">
 					<div class="ptr-prel-content">
 						<!-- Hint: You may need to change the img height and opacity to match your logo type. You can do this from the "theme.css" file (find: ".ptr-prel-image"). -->
-						<img src="assets/img/logo-light.png" class="ptr-prel-image tt-logo-light" alt="Logo">
+						<img src="/images/logo_transparant.png" class="ptr-prel-image tt-logo-light" alt="Logo">
 					</div> <!-- /.ptr-prel-content -->
 				</div> <!-- /.ptr-preloader -->
 			</div>
@@ -104,10 +104,10 @@
 							<!-- Begin logo
 							================ -->
 							<div class="tt-logo">
-								<a href="index.html">
+								<a href="/">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
-									<img src="assets/img/logo-light.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
-									<img src="assets/img/logo-dark.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
+									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo" width="100px"> <!-- logo light -->
+									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo" width="100px"> <!-- logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->
@@ -145,106 +145,31 @@
 
 												<!-- Begin submenu (submenu master)
 												==================================== -->
-												<li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="#">Home</a>
-														<div class="tt-ol-submenu-caret-wrap">
-															<div class="tt-ol-submenu-caret magnetic-item"></div>
-														</div> <!-- /.tt-ol-submenu-caret-wrap -->
-													</div> <!-- /.tt-ol-submenu-trigger -->
-													<div class="tt-ol-submenu">
-														<ul class="tt-ol-submenu-list">
-
-															<li><a href="landing-page-1.html">Landing Page v.1</a></li>
-															<li><a href="landing-page-2.html">Landing Page v.2</a></li>
-
-														</ul> <!-- /.tt-ol-submenu-list -->
-													</div> <!-- /.tt-ol-submenu -->
-												</li>
-												<!-- End submenu (sub-master) -->
-
-												<!-- Begin submenu (submenu master)
-												==================================== -->
 												<li class="tt-ol-submenu-wrap active">
 													<div class="tt-ol-submenu-trigger">
-														<a href="#">Portfolio</a>
+														<a href="/">Home</a>
+													</div> <!-- /.tt-ol-submenu-trigger -->
+												</li>
+												<!-- End submenu (sub-master) -->
+
+												<!-- Begin submenu (submenu master)
+												==================================== -->
+												<li class="tt-ol-submenu-wrap">
+													<div class="tt-ol-submenu-trigger">
+														<a href="/gallery">Gallery</a>
 														<div class="tt-ol-submenu-caret-wrap">
 															<div class="tt-ol-submenu-caret magnetic-item"></div>
 														</div> <!-- /.tt-ol-submenu-caret-wrap -->
 													</div> <!-- /.tt-ol-submenu-trigger -->
 													<div class="tt-ol-submenu">
 														<ul class="tt-ol-submenu-list">
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Portfolio List</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="portfolio-list-classic.html">List Classic</a></li>
-																		<li><a href="portfolio-list-overlay.html">List Overlay</a></li>
-																		<li><a href="portfolio-list-compact.html">List Compact</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Portfolio Grid</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="portfolio-grid-creative-1.html">Grid Creative v.1</a></li>
-																		<li><a href="portfolio-grid-creative-2.html">Grid Creative v.2</a></li>
-																		<li><a href="portfolio-grid-modern.html">Grid Modern</a></li>
-																		<li><a href="portfolio-grid-classic.html">Grid Classic</a></li>
-																		<li><a href="portfolio-grid-portrait-mode.html">Portrait Mode</a></li>
-																		<li><a href="portfolio-one-column.html">One Column</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap active">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Slider &amp; Carousel</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="portfolio-fullscreen-slider.html">Fullscreen Slider</a></li>
-																		<li class="active"><a href="portfolio-carousel-overlay.html">Carousel Overlay</a></li>
-																		<li><a href="portfolio-carousel-center.html">Carousel Center</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-															<li><a href="portfolio-interactive.html">Interactive</a></li>
-															<li><a href="portfolio-interactive-compact.html">Interactive Compact</a></li>
-															<li><a href="elements-classic-menu.html">Classic Menu</a></li>
-
+                                                            @foreach ($category as $ctg)
+                                                                <li>
+                                                                    <a href="/gallery/category/{{$ctg->category}}">
+                                                                    {{ucwords(str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $ctg->category))}}
+                                                                    </a>
+                                                                </li>
+                                                            @endforeach
 														</ul> <!-- /.tt-ol-submenu-list -->
 													</div> <!-- /.tt-ol-submenu -->
 												</li>
@@ -254,17 +179,29 @@
 												==================================== -->
 												<li class="tt-ol-submenu-wrap">
 													<div class="tt-ol-submenu-trigger">
-														<a href="#">About</a>
-														<div class="tt-ol-submenu-caret-wrap">
+														<a href="/about">About</a>
+													</div> <!-- /.tt-ol-submenu-trigger -->
+												</li>
+												<!-- End submenu (sub-master) -->
+
+												<!-- Begin submenu (submenu master)
+												==================================== -->
+												<li class="tt-ol-submenu-wrap">
+													<div class="tt-ol-submenu-trigger">
+														<a href="/article">Article</a>
+                                                        <div class="tt-ol-submenu-caret-wrap">
 															<div class="tt-ol-submenu-caret magnetic-item"></div>
 														</div> <!-- /.tt-ol-submenu-caret-wrap -->
 													</div> <!-- /.tt-ol-submenu-trigger -->
 													<div class="tt-ol-submenu">
 														<ul class="tt-ol-submenu-list">
-
-															<li><a href="about-us.html">About Us</a></li>
-															<li><a href="about-me.html">About Me</a></li>
-
+                                                            @foreach ($category_article as $ctg)
+                                                            <li>
+                                                                <a href="/article/category/{{$ctg->category_id}}">
+                                                                {{$ctg->category}}
+                                                                </a>
+                                                            </li>
+                                                            @endforeach
 														</ul> <!-- /.tt-ol-submenu-list -->
 													</div> <!-- /.tt-ol-submenu -->
 												</li>
@@ -274,162 +211,12 @@
 												==================================== -->
 												<li class="tt-ol-submenu-wrap">
 													<div class="tt-ol-submenu-trigger">
-														<a href="#">Blog</a>
-														<div class="tt-ol-submenu-caret-wrap">
-															<div class="tt-ol-submenu-caret magnetic-item"></div>
-														</div> <!-- /.tt-ol-submenu-caret-wrap -->
+														<a href="/services">Services</a>
 													</div> <!-- /.tt-ol-submenu-trigger -->
-													<div class="tt-ol-submenu">
-														<ul class="tt-ol-submenu-list">
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Blog List</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="blog-interactive.html">Interactive List</a></li>
-																		<li><a href="blog-list.html">Compact List</a></li>
-																		<li><a href="blog-classic.html">Classic List</a></li>
-																		<li><a href="blog-classic-sidebar.html">Classic Sidebar</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Blog Post</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="blog-post.html">Single Post</a></li>
-																		<li><a href="blog-post-classic-sidebar.html">Classic Sidebar</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-														</ul> <!-- /.tt-ol-submenu-list -->
-													</div> <!-- /.tt-ol-submenu -->
 												</li>
 												<!-- End submenu (sub-master) -->
 
-												<!-- Begin submenu (submenu master)
-												==================================== -->
-												<li class="tt-ol-submenu-wrap">
-													<div class="tt-ol-submenu-trigger">
-														<a href="#">Shop</a>
-														<div class="tt-ol-submenu-caret-wrap">
-															<div class="tt-ol-submenu-caret magnetic-item"></div>
-														</div> <!-- /.tt-ol-submenu-caret-wrap -->
-													</div> <!-- /.tt-ol-submenu-trigger -->
-													<div class="tt-ol-submenu">
-														<ul class="tt-ol-submenu-list">
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Product Lists</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="shop-list.html">Sliding Sidebar</a></li>
-																		<li><a href="shop-list-classic.html">Classic Sidebar</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Product Pages</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="shop-single.html">Product Page</a></li>
-																		<li><a href="shop-single-simple.html">Simple Product Page</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">Product Ordering</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="shop-cart.html">Shopping Cart</a></li>
-																		<li><a href="shop-checkout.html">Checkout</a></li>
-																		<li><a href="shop-order-details.html">Order Details</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-															<!-- Begin submenu
-															=================== -->
-															<li class="tt-ol-submenu-wrap">
-																<div class="tt-ol-submenu-trigger">
-																	<a href="#" class="tt-ol-submenu-link">More Pages</a>
-																	<div class="tt-ol-submenu-caret-wrap">
-																		<div class="tt-ol-submenu-caret magnetic-item"></div>
-																	</div> <!-- /.tt-ol-submenu-caret-wrap -->
-																</div> <!-- /.tt-ol-submenu-trigger -->
-																<div class="tt-ol-submenu">
-																	<ul class="tt-ol-submenu-list">
-
-																		<li><a href="shop-wishlist.html">Wishlist</a></li>
-																		<li><a href="shop-login.html">Login Page</a></li>
-																		<li><a href="shop-register.html">Register Account</a></li>
-																		<li><a href="shop-reset-password.html">Reset Password</a></li>
-
-																	</ul> <!-- /.tt-ol-submenu-list -->
-																</div> <!-- /.tt-ol-submenu -->
-															</li>
-															<!-- End submenu -->
-
-														</ul> <!-- /.tt-ol-submenu-list -->
-													</div> <!-- /.tt-ol-submenu -->
-												</li>
-												<!-- End submenu (sub-master) -->
-
-												<li><a href="contact.html">Contact</a></li>
+												<li><a href="/contact">Contact</a></li>
 
 											</ul>
 											<!-- End menu list -->
@@ -486,7 +273,7 @@
 
 								<!-- Begin swiper wrapper (required) -->
 								<div class="swiper-wrapper">
-
+                                    @foreach ($galleries as $gallery)
 									<!-- Begin swiper slide
 									======================== -->
 									<div class="swiper-slide">
@@ -495,19 +282,19 @@
 										===================================
 										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
 										-->
-										<a href="single-project-1.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
+										<a href="/gallery/{{$gallery->gallery_id}}" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
 
 											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
 											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-1.jpg" alt="Image">
+												<img class="tt-pci-image swiper-lazy" src="{{$gallery->media}}" data-src="{{$gallery->media}}" alt="Image">
 											</figure> <!-- /.tt-pci-image-wrap -->
 
 											<div class="tt-pci-caption-front">
 												<div class="tt-pci-caption">
 													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Victorian<br class="hide-from-sm"> Girls</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+														<h2 class="tt-pci-title">{{$gallery->title}}</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
 														<div class="tt-pci-categories">
-															<div class="tt-pci-category">People</div>
+															<div class="tt-pci-category">{{ucwords(str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gallery->category))}}</div>
 															<!-- <div class="tt-pci-category">Varia</div> -->
 														</div> <!-- /.tt-pci-categories -->
 													</div> <!-- /.tt-pci-caption-inner -->
@@ -516,9 +303,9 @@
 
 											<div class="tt-pci-caption tt-pci-caption-back">
 												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Victorian<br class="hide-from-sm"> Girls</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
+													<h2 class="tt-pci-title">{{$gallery->title}}</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
 													<div class="tt-pci-categories">
-														<div class="tt-pci-category">People</div>
+														<div class="tt-pci-category">{{ucwords(str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $gallery->category))}}</div>
 														<!-- <div class="tt-pci-category">Varia</div> -->
 													</div> <!-- /.tt-pci-categories -->
 												</div> <!-- /.tt-pci-caption-inner -->
@@ -528,349 +315,9 @@
 
 									</div>
 									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-2.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-2.jpg" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Smithy</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">Creative</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Smithy</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">Creative</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-3.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<video class="tt-pci-video" loop muted preload="metadata" poster="assets/vids/fashion-week.jpg">
-													<source src="assets/vids/fashion-week.mp4" type="video/mp4">
-													<source src="assets/vids/fashion-week.webm" type="video/webm">
-												</video>
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Fashion<br class="hide-from-sm"> Week</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">People</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Fashion<br class="hide-from-sm"> Week</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">People</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-4.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-3.jpg" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Mystery<br class="hide-from-sm"> Forest</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">Nature</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Mystery<br class="hide-from-sm"> Forest</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">Nature</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-5.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-4.jpg" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Red<br class="hide-from-sm"> Package</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">Branding</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Red<br class="hide-from-sm"> Package</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">Branding</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-6.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-5.jpg" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Studio<br class="hide-from-sm"> Shoot</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">People</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Studio<br class="hide-from-sm"> Shoot</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">People</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-7.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-6.jpg" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Breaking<br class="hide-from-sm"> Wave</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">Nature</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Breaking<br class="hide-from-sm"> Wave</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">Nature</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-8.html" class="tt-portfolio-carousel-item pci-image-is-light" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-4">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-7.jpg" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Wall<br class="hide-from-sm"> Lamp</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">Branding</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Wall<br class="hide-from-sm"> Lamp</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">Branding</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
-									<!-- Begin swiper slide
-									======================== -->
-									<div class="swiper-slide">
-
-										<!-- Begin portfolio carousel item
-										===================================
-										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
-										-->
-										<a href="single-project-9.html" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
-
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/carousel/portf-carousel-8.jpg" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
-
-											<div class="tt-pci-caption-front">
-												<div class="tt-pci-caption">
-													<div class="tt-pci-caption-inner">
-														<h2 class="tt-pci-title">Elegant<br class="hide-from-sm"> Stoves</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-														<div class="tt-pci-categories">
-															<div class="tt-pci-category">Creative</div>
-															<!-- <div class="tt-pci-category">Varia</div> -->
-														</div> <!-- /.tt-pci-categories -->
-													</div> <!-- /.tt-pci-caption-inner -->
-												</div> <!-- /.tt-pci-caption -->
-											</div> <!-- /.tt-pci-caption-front -->
-
-											<div class="tt-pci-caption tt-pci-caption-back">
-												<div class="tt-pci-caption-inner">
-													<h2 class="tt-pci-title">Elegant<br class="hide-from-sm"> Stoves</h2> <!-- You can use <br class="hide-from-sm"> to break a text line if needed -->
-													<div class="tt-pci-categories">
-														<div class="tt-pci-category">Creative</div>
-														<!-- <div class="tt-pci-category">Varia</div> -->
-													</div> <!-- /.tt-pci-categories -->
-												</div> <!-- /.tt-pci-caption-inner -->
-											</div> <!-- /.tt-pci-caption -->
-										</a>
-										<!-- End portfolio carousel item -->
-
-									</div>
-									<!-- End swiper slide -->
-
+                                    @endforeach
 								</div>
 								<!-- End swiper wrapper -->
-
 							</div>
 							<!-- End swiper container -->
 
@@ -908,7 +355,7 @@
 
 									<!-- You can use whatever button or link here -->
 									<div class="tt-btn tt-btn-link">
-										<a href="contact.html" data-hover="Get in Touch">Get in Touch</a>
+										<a href="whatsapp://send?text=Hai, saya ingin buat video!&phone={{$profile[0]->company_phone}}" data-hover="CONTACT US">CONTACT US</a>
 									</div>
 
 								</div> <!-- /.footer-col-inner -->
@@ -960,23 +407,23 @@
 		===================== -->
 
 		<!-- Core JS -->
-		<script src="assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
+		<script src="/user-template/assets/vendor/jquery/jquery.min.js"></script> <!-- jquery JS (https://jquery.com) -->
 
 		<!-- Libs and Plugins JS -->
-		<script src="assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
-		<script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script> <!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
-		<script src="assets/vendor/gsap/ScrollTrigger.min.js"></script> <!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
+		<script src="/user-template/assets/vendor/gsap/gsap.min.js"></script> <!-- GSAP JS (https://greensock.com/gsap/) -->
+		<script src="/user-template/assets/vendor/gsap/ScrollToPlugin.min.js"></script> <!-- GSAP ScrollToPlugin JS (https://greensock.com/scrolltoplugin/) -->
+		<script src="/user-template/assets/vendor/gsap/ScrollTrigger.min.js"></script> <!-- GSAP ScrollTrigger JS (https://greensock.com/scrolltrigger/) -->
 
-		<script src="assets/vendor/smooth-scrollbar.js"></script> <!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
-		<script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
-		<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> <!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
-		<script src="assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
-		<script src="assets/vendor/isotope/packery-mode.pkgd.min.js"></script> <!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
-		<script src="assets/vendor/lightgallery/js/lightgallery-all.min.js"></script> <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
-		<script src="assets/vendor/jquery.mousewheel.min.js"></script> <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
+		<script src="/user-template/assets/vendor/smooth-scrollbar.js"></script> <!-- Smooth Scrollbar JS (https://github.com/idiotWu/smooth-scrollbar/) -->
+		<script src="/user-template/assets/vendor/swiper/js/swiper-bundle.min.js"></script> <!-- Swiper JS (https://swiperjs.com/) -->
+		<script src="/user-template/assets/vendor/isotope/imagesloaded.pkgd.min.js"></script> <!-- imagesloaded JS (more info: https://imagesloaded.desandro.com/) -->
+		<script src="/user-template/assets/vendor/isotope/isotope.pkgd.min.js"></script> <!-- Isotope JS (http://isotope.metafizzy.co) -->
+		<script src="/user-template/assets/vendor/isotope/packery-mode.pkgd.min.js"></script> <!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
+		<script src="/user-template/assets/vendor/lightgallery/js/lightgallery-all.min.js"></script> <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
+		<script src="/user-template/assets/vendor/jquery.mousewheel.min.js"></script> <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
 
 		<!-- Theme master JS -->
-		<script src="assets/js/theme.js"></script>
+		<script src="/user-template/assets/js/theme.js"></script>
 
 
 
