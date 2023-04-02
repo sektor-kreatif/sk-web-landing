@@ -106,8 +106,8 @@
 							<div class="tt-logo">
 								<a href="/">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
-									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo" width="100px"> <!-- logo light -->
-									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo" width="100px"> <!-- logo dark -->
+									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
+									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->
@@ -265,7 +265,7 @@
 							============================= -->
 							<div class="ph-image">
 								<div class="ph-image-inner">
-									<img src="/user-template/assets/img/page-header/ph-6.jpg" alt="Image">
+									<img src="/images/videos.png" alt="Image">
 								</div>
 							</div>
 							<!-- End page header image -->
@@ -436,10 +436,9 @@
 																<ul class="ttgr-cat-list">
 																	<li class="ttgr-cat-close">Close <i class="fas fa-times"></i></li> <!-- For mobile devices! -->
 																	<li class="ttgr-cat-item"><a href="#" class="active">Show All</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".branding">Branding</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".people">People</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".nature">Nature</a></li>
-																	<li class="ttgr-cat-item"><a href="#" data-filter=".creative">Creative</a></li>
+                                                                    @foreach ($category as $ctg)
+																	<li class="ttgr-cat-item"><a href="#" data-filter=".{{$ctg->category}}">{{ucwords(str_replace( array( '\'', '"', ',' , ';', '<', '>', '-' ), ' ', $ctg->category))}}</a></li>
+                                                                    @endforeach
 																</ul>
 															</div> <!-- /.ttgr-cat-links-content -->
 														</div> <!-- /.ttgr-cat-links-inner -->
@@ -461,7 +460,7 @@
                                             @if($gts->type == 'image')
 											<!-- Begin tt-Grid item
 											======================== -->
-											<div class="tt-grid-item isotope-item creative">
+											<div class="tt-grid-item isotope-item {{$gts->category}}">
 												<div class="ttgr-item-inner">
 
 													<!-- Begin portfolio grid item
@@ -469,7 +468,7 @@
 													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 													-->
 													<div class="portfolio-grid-item">
-														<a href="/gallery/{{$gts->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
+														<a href="#" class="pgi-image-wrap">
 															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
@@ -500,7 +499,7 @@
                                             @else
 											<!-- Begin tt-Grid item
 											======================== -->
-											<div class="tt-grid-item isotope-item people">
+											<div class="tt-grid-item isotope-item {{$gts->category}}">
 												<div class="ttgr-item-inner">
 
 													<!-- Begin portfolio grid item
@@ -508,13 +507,12 @@
 													* Use class "pgi-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pgi-cap-inside" is enabled on "portfolio-grid"!).
 													-->
 													<div class="portfolio-grid-item">
-														<a href="/gallery/{{$gts->gallery_id}}" class="pgi-image-wrap" data-cursor="View<br>Project">
+														<a href="#" class="pgi-image-wrap">
 															<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pgi-cap-inside" is enabled on "portfolio-grid". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
 															<div class="pgi-image-holder">
 																<div class="pgi-image-inner anim-zoomin">
 																	<figure class="pgi-video-wrap ttgr-height">
-																		<video class="pgi-video" loop muted preload="metadata" poster="{{$gts->media}}">
-																			<source src="{{$gts->media}}" type="video/mp4">
+																		<video class="pgi-video" loop muted preload="metadata" controls="true" data-yt2html5="{{$gts->media}}">
 																		</video>
 																	</figure> <!-- /.pgi-video-wrap -->
 																</div> <!-- /.pgi-image-inner -->
@@ -895,8 +893,8 @@
 		<!-- Theme master JS -->
 		<script src="/user-template/assets/js/theme.js"></script>
 
-
-
+        <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+        <script>new YouTubeToHtml5();</script>
 	</body>
 
 </html>

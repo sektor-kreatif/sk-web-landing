@@ -35,12 +35,15 @@ class DocumentationController extends Controller
                 'title' => '|required|unique:documentation',
                 'description' => '|required',
                 'type' => '|required',
-                'media' => '|required|mimes:jpeg,jpg,png,gif,mp4,mkv,mov,ogg,qt',
             ]);
             $documentation = new Documentation();
             $documentation->doc_id = $this->generateRandomString(16);
             $documentation->title = $request->title;
-            $documentation->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+            if($request->hasFile('media')) {
+                $documentation->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+            }else {
+                $documentation->media = $request->media;
+            }
             $documentation->type = $request->type;
             $documentation->description = $request->description;
             if(!$documentation->save()) {
@@ -60,10 +63,11 @@ class DocumentationController extends Controller
             $documentation = Documentation::findOrFail($request->doc_id);
             $documentation->title = $request->title;
             if($request->has('media')) {
-                $this->validate($request, [
-                    'media' => '|required|mimes:jpeg,jpg,png,gif,mp4,mkv,mov,ogg,qt',
-                ]);
-                $documentation->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+                if($request->hasFile('media')) {
+                    $documentation->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+                }else {
+                    $documentation->media = $request->media;
+                }
             }
             $documentation->type = $request->type;
             $documentation->description = $request->description;

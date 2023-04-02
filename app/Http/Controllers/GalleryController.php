@@ -34,13 +34,16 @@ class GalleryController extends Controller
             $this->validate($request, [
                 'title' => '|required|unique:gallery',
                 'category' => '|required',
-                'type' => '|required',
-                'media' => '|required|mimes:jpeg,jpg,png,gif,mp4,mkv,mov,ogg,qt',
+                'type' => '|required'
             ]);
             $gallery = new Gallery();
             $gallery->gallery_id = $this->generateRandomString(16);
             $gallery->title = $request->title;
-            $gallery->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+            if($request->hasFile('media')) {
+                $gallery->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+            }else {
+                $gallery->media = $request->media;
+            }
             $gallery->type = $request->type;
             $gallery->category = $request->category;
             if(!$gallery->save()) {
@@ -60,10 +63,11 @@ class GalleryController extends Controller
             $gallery = Gallery::findOrFail($request->gallery_id);
             $gallery->title = $request->title;
             if($request->has('media')) {
-                $this->validate($request, [
-                    'media' => '|required|mimes:jpeg,jpg,png,gif,mp4,mkv,mov,ogg,qt',
-                ]);
-                $gallery->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+                if($request->hasFile('media')) {
+                    $gallery->media = cloudinary()->uploadFile($request->file('media')->getRealPath())->getSecurePath();
+                }else {
+                    $gallery->media = $request->media;
+                }
             }
             $gallery->type = $request->type;
             $gallery->category = $request->category;

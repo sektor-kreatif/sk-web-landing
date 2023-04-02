@@ -53,18 +53,23 @@
                                 </td>
                                 <td>
                                     @if ($doc->type == 'video')
-                                        <video width="200px" preload controls>
+                                        {{-- <video width="200px" preload controls>
                                             <source src="{{$doc->media}}">
-                                        </video>
+                                        </video> --}}
+                                        <iframe width="200px"
+                                            src="{{$doc->media}}"
+                                            allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
                                     @elseif ($doc->type == 'image')
                                         <img src="{{$doc->media}}" width="200px">
                                     @endif
                                 </td>
                                 <td>
-                                    @if ($gal->type == 'image')
-                                        <span class="badge badge-warning">{{$gal->type}}</span>
-                                    @elseif ($gal->type == 'video')
-                                        <span class="badge badge-info">{{$gal->type}}</span>
+                                    @if ($doc->type == 'image')
+                                        <span class="badge badge-warning">{{$doc->type}}</span>
+                                    @elseif ($doc->type == 'video')
+                                        <span class="badge badge-info">{{$doc->type}}</span>
                                     @endif
                                 </td>
                                 <td>
@@ -130,8 +135,8 @@
                         <div class="col-md-12">
                             <label>Media</label>
                         </div>
-                        <div class="col-md-12">
-                            <input type="file" accept="video/*, image/*" name="media" id="media">
+                        <div id="media-form" class="col-md-12">
+                            <input type="file" accept="image/*" name="media" id="media">
                         </div>
                     </div>
                 </div>
@@ -188,8 +193,8 @@
                         <div class="col-md-12">
                             <label>Media</label>
                         </div>
-                        <div class="col-md-12">
-                            <input type="file" accept="video/*, image/*" name="media" id="media">
+                        <div id="media-form" class="col-md-12">
+                            <input type="file" accept="image/*" name="media" id="media">
                         </div>
                     </div>
                 </div>
@@ -261,17 +266,56 @@
     dataTables()
 </script>
 <script>
+    function documentationAdd() {
+        $(document).ready(function() {
+            $('#addDocumentation').on('show.bs.modal', (event) => {
+                let modal = $(this);
+                let options = modal.find('.modal-body #type');
+                options.on('change', function() {
+                    const value = $(this).val();
+                    console.log(value);
+                    let html = '';
+                    if(value === 'video') {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<div class="form-group"><input type="text" class="form-control" name="media" id="media" placeholder="Url Youtube"></div>`;
+                    }else {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<input type="file" accept="image/*" name="media" id="media">`;
+                    }
+                    modal.find('.modal-body #media-form').html(html);
+                });
+                options.change();
+            });
+        });
+    }
     function documentationEdit() {
         $(document).ready(function() {
             $('#editDocumentation').on('show.bs.modal', (event) => {
                 const button = $(event.relatedTarget);
                 const documentation = Object(button.data('documentation'));
                 console.log(documentation);
+
                 let modal = $(this);
                 modal.find('.modal-body #doc_id').val(documentation.doc_id);
                 modal.find('.modal-body #title').val(documentation.title);
                 modal.find('.modal-body #description').html(documentation.description);
                 modal.find('.modal-body #type').val(documentation.type);
+
+                let options = modal.find('.modal-body #type');
+                options.on('change', function() {
+                    const value = $(this).val();
+                    console.log(value);
+                    let html = '';
+                    if(value === 'video') {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<div class="form-group"><input type="text" class="form-control" name="media" id="media" placeholder="Url Youtube" value="${documentation.media}"></div>`;
+                    }else {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<input type="file" accept="image/*" name="media" id="media">`;
+                    }
+                    modal.find('.modal-body #media-form').html(html);
+                });
+                options.change();
             });
         });
     }
@@ -286,6 +330,7 @@
             });
         });
     }
+    documentationAdd();
     documentationEdit()
     documentationDelete();
 </script>

@@ -106,8 +106,8 @@
 							<div class="tt-logo">
 								<a href="/">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
-									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo" width="100px"> <!-- logo light -->
-									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo" width="100px"> <!-- logo dark -->
+									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
+									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->
@@ -332,7 +332,7 @@
                                     @foreach ($galleries as $gallery)
                                     @if(($gallery->index+1)%2 == 1)
 
-                                        <!-- Begin portfolio list item
+                                    <!-- Begin portfolio list item
 									===============================
 									* Use class "pli-image-is-light" if needed, it makes the caption visible better if you use light image (only effect if "pli-info-overlay" is enabled!).
 									-->
@@ -340,12 +340,17 @@
 										<div class="pli-inner">
 
 											<div class="pli-image-col">
-												<a href="/gallery/{{$gallery->gallery_id}}" class="pli-image-link" data-cursor="View<br>Project">
+												<a href="/gallery/{{$gallery->gallery_id}}" class="pli-image-link" data-cursor="View<br>Portofolio">
 													<div class="pli-image-holder">
-														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-														<figure class="pli-image cover-opacity-2">
-															<img class="anim-image-parallax tt-lazy" src="{{$gallery->media}}" data-src="{{$gallery->media}}" alt="image">
-														</figure> <!-- /.pli-image -->
+                                                        @if($gallery->type == "image")
+                                                            <figure class="pli-image cover-opacity-2">
+                                                                <img class="anim-image-parallax tt-lazy" src="{{$gallery->media}}" data-src="{{$gallery->media}}" alt="image">
+                                                            </figure> <!-- /.pli-image -->
+                                                        @else
+                                                            <figure class="pli-video-wrap anim-image-parallax">
+                                                                <video class="pli-video" loop muted autoplay preload="metadata" data-yt2html5="{{$gallery->media}}"></video>
+                                                            </figure> <!-- /.pli-video -->
+                                                        @endif
 													</div> <!-- /.pli-image-holder -->
 
 													<div class="pli-info-col pli-info-inner">
@@ -384,12 +389,17 @@
 										<div class="pli-inner">
 
 											<div class="pli-image-col">
-												<a href="/gallery/{{$gallery->gallery_id}}" class="pli-image-link" data-cursor="View<br>Project">
+												<a href="/gallery/{{$gallery->gallery_id}}" class="pli-image-link" data-cursor="View<br>Portofolio">
 													<div class="pli-image-holder">
-														<!-- Use class "cover-opacity-*" to set image overlay if needed. For example "cover-opacity-2". Useful if class "pli-info-overlay" is enabled on "portfolio-list". Note: It is individual and depends on the image you use. More info about helper classes in file "helper.css". -->
-														<figure class="pli-image cover-opacity-2">
-															<img class="anim-image-parallax tt-lazy" src="{{$gallery->media}}" data-src="{{$gallery->media}}" alt="image">
-														</figure> <!-- /.pli-image -->
+                                                        @if($gallery->type == "image")
+                                                            <figure class="pli-image cover-opacity-2">
+                                                                <img class="anim-image-parallax tt-lazy" src="{{$gallery->media}}" data-src="{{$gallery->media}}" alt="image">
+                                                            </figure> <!-- /.pli-image -->
+                                                        @else
+                                                            <figure class="pli-video-wrap anim-image-parallax">
+                                                                <video class="pli-video" loop muted preload="metadata" controls="true" data-yt2html5="{{$gallery->media}}"></video>
+                                                            </figure> <!-- /.pli-video -->
+                                                        @endif
 													</div> <!-- /.pli-image-holder -->
 
 													<div class="pli-info-col pli-info-inner">
@@ -583,7 +593,8 @@
 
 		<!-- Theme master JS -->
 		<script src="/user-template/assets/js/theme.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+        <script>new YouTubeToHtml5();</script>
 	</body>
 
 </html>

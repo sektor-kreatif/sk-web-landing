@@ -106,8 +106,8 @@
 							<div class="tt-logo">
 								<a href="/">
 									<!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
-									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo" width="100px"> <!-- logo light -->
-									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo" width="100px"> <!-- logo dark -->
+									<img src="/images/logo-color.png" class="tt-logo-light magnetic-item" alt="Logo"> <!-- logo light -->
+									<img src="/images/logo_transparant.png" class="tt-logo-dark magnetic-item" alt="Logo"> <!-- logo dark -->
 								</a>
 							</div>
 							<!-- End logo -->
@@ -274,6 +274,7 @@
 								<!-- Begin swiper wrapper (required) -->
 								<div class="swiper-wrapper">
                                     @foreach ($galleries as $gallery)
+
 									<!-- Begin swiper slide
 									======================== -->
 									<div class="swiper-slide">
@@ -282,12 +283,17 @@
 										===================================
 										* Use class "pci-image-is-light" if needed, it makes the caption visible better (useful if you use light image). No effect on smaller screens!
 										-->
-										<a href="/gallery/{{$gallery->gallery_id}}" class="tt-portfolio-carousel-item" data-cursor="View<br>Project">
+										<a href="/gallery/{{$gallery->gallery_id}}" class="tt-portfolio-carousel-item" data-cursor="View<br>Portofolio">
 
-											<!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
-											<figure class="tt-pci-image-wrap cover-opacity-2">
-												<img class="tt-pci-image swiper-lazy" src="{{$gallery->media}}" data-src="{{$gallery->media}}" alt="Image">
-											</figure> <!-- /.tt-pci-image-wrap -->
+                                            @if($gallery->type == "image")
+                                                <figure class="tt-pci-image-wrap cover-opacity-2">
+                                                    <img class="tt-pci-image swiper-lazy" src="{{$gallery->media}}" data-src="{{$gallery->media}}" alt="Image">
+                                                </figure> <!-- /.tt-pci-image-wrap -->
+                                            @else
+                                                <figure class="tt-pci-image-wrap cover-opacity-2">
+                                                    <video class="tt-pci-video" loop muted preload="metadata" data-yt2html5="{{$gallery->media}}"></video>
+                                                </figure> <!-- /.tt-pci-image-wrap -->
+                                            @endif
 
 											<div class="tt-pci-caption-front">
 												<div class="tt-pci-caption">
@@ -424,9 +430,8 @@
 
 		<!-- Theme master JS -->
 		<script src="/user-template/assets/js/theme.js"></script>
-
-
-
+        <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+        <script>new YouTubeToHtml5();</script>
 	</body>
 
 </html>

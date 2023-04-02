@@ -56,9 +56,14 @@
                                 </td>
                                 <td>
                                     @if ($gal->type == 'video')
-                                        <video width="200px" preload controls>
+                                        {{-- <video width="200px" preload controls>
                                             <source src="{{$gal->media}}">
-                                        </video>
+                                        </video> --}}
+                                        <iframe width="200px"
+                                            src="{{$gal->media}}"
+                                            allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen>
+                                        </iframe>
                                     @elseif ($gal->type == 'image')
                                         <img src="{{$gal->media}}" width="200px">
                                     @endif
@@ -149,8 +154,8 @@
                         <div class="col-md-12">
                             <label>Media</label>
                         </div>
-                        <div class="col-md-12">
-                            <input type="file" accept="video/*, image/*" name="media" id="media">
+                        <div id="media-form" class="col-md-12">
+                            <input type="file" accept="image/*" name="media" id="media">
                         </div>
                     </div>
                 </div>
@@ -220,8 +225,8 @@
                         <div class="col-md-12">
                             <label>Media</label>
                         </div>
-                        <div class="col-md-12">
-                            <input type="file" accept="video/*, image/*" name="media" id="media">
+                        <div id="media-form" class="col-md-12">
+                            <input type="file" accept="image/*" name="media" id="media">
                         </div>
                     </div>
                 </div>
@@ -293,17 +298,56 @@
     dataTables()
 </script>
 <script>
+    function galeryAdd() {
+        $(document).ready(function() {
+            $('#addGallery').on('show.bs.modal', (event) => {
+                let modal = $(this);
+                let options = modal.find('.modal-body #type');
+                options.on('change', function() {
+                    const value = $(this).val();
+                    console.log(value);
+                    let html = '';
+                    if(value === 'video') {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<div class="form-group"><input type="text" class="form-control" name="media" id="media" placeholder="Url Youtube"></div>`;
+                    }else {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<input type="file" accept="image/*" name="media" id="media">`;
+                    }
+                    modal.find('.modal-body #media-form').html(html);
+                });
+                options.change();
+            });
+        });
+    }
     function galeryEdit() {
         $(document).ready(function() {
             $('#editGallery').on('show.bs.modal', (event) => {
                 const button = $(event.relatedTarget);
                 const gallery = Object(button.data('gallery'));
                 console.log(gallery);
+
                 let modal = $(this);
                 modal.find('.modal-body #gallery_id').val(gallery.gallery_id);
                 modal.find('.modal-body #title').val(gallery.title);
                 modal.find('.modal-body #category').val(gallery.category);
                 modal.find('.modal-body #type').val(gallery.type);
+
+                let options = modal.find('.modal-body #type');
+                options.on('change', function() {
+                    const value = $(this).val();
+                    console.log(value);
+                    let html = '';
+                    if(value === 'video') {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<div class="form-group"><input type="text" class="form-control" name="media" id="media" placeholder="Url Youtube" value="${gallery.media}"></div>`;
+                    }else {
+                        modal.find('.modal-body #media-form').empty();
+                        html = `<input type="file" accept="image/*" name="media" id="media">`;
+                    }
+                    modal.find('.modal-body #media-form').html(html);
+                });
+                options.change();
             });
         });
     }
@@ -318,6 +362,7 @@
             });
         });
     }
+    galeryAdd();
     galeryEdit();
     galleryDelete();
 </script>
